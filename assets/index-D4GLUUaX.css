@@ -1,0 +1,257 @@
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%
+}
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    background-color: #1a1a1ab2;
+    color: #eee;
+    overflow: hidden
+}
+
+#app {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden
+}
+
+.sidebar {
+    width: 500px;
+    height: 100vh;
+    background: #2d2d2d;
+    border-right: 1px solid #444;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    z-index: 10
+}
+
+.controls-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px
+}
+
+.sidebar-footer {
+    padding: 15px;
+    background: #252525;
+    border-top: 1px solid #444;
+    box-shadow: 0 -4px 10px #0003;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.button-row {
+    display: flex;
+    gap: 8px
+}
+
+.workspace {
+    flex: 1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: linear-gradient(17deg,#323e42 10%,#6e6e6e 42%,#609797)
+}
+
+canvas {
+    max-width: calc(100vw - 500px);
+    padding: 5px;
+    max-height: 90vh;
+    min-height: 200px;
+    width: auto;
+    height: auto;
+    background: transparent;
+    box-shadow: 0 0 30px #000000e6
+}
+
+.layer-section {
+    background: #383838;
+    border-radius: 8px;
+    border: 1px solid #555
+}
+
+.layer-header {
+    background: #444;
+    padding: 10px 15px;
+    font-weight: 700;
+    border-bottom: 1px solid #555;
+    color: #fff
+}
+
+.layer-controls {
+    padding: 15px
+}
+
+h3 {
+    margin: 15px 0 8px;
+    font-size: .75rem;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #555;
+    padding-bottom: 4px
+}
+
+h3:first-of-type {
+    margin-top: 0
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+    font-size: .8rem;
+    margin-bottom: 5px;
+    color: #ccc
+}
+
+input[type=file] {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: .85rem;
+    color: #ccc
+}
+
+input[type=range] {
+    width: 100%;
+    cursor: pointer;
+    height: 6px;
+    border-radius: 5px;
+    appearance: none;
+    outline: none;
+    margin-bottom: 12px;
+    background: #555
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #777;
+    transition: transform .1s
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    background: #007bff;
+    border-color: #007bff
+}
+
+button {
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    transition: background .2s;
+    font-size: .9rem
+}
+
+button:hover {
+    background-color: #0056b3
+}
+
+button.secondary {
+    background-color: #555
+}
+
+button.secondary:hover {
+    background-color: #666
+}
+
+button.warning {
+    background-color: #d9534f
+}
+
+button.warning:hover {
+    background-color: #c9302c
+}
+
+button.zip-btn {
+    background-color: #fd7e14
+}
+
+button.zip-btn:hover {
+    background-color: #e36a02
+}
+
+button:disabled {
+    background-color: #333;
+    color: #777;
+    cursor: not-allowed
+}
+
+.value-display {
+    font-family: monospace;
+    color: #fff
+}
+
+.controls-container::-webkit-scrollbar {
+    width: 8px
+}
+
+.controls-container::-webkit-scrollbar-track {
+    background: #2d2d2d
+}
+
+.controls-container::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 8px;
+    margin-bottom: 12px
+}
+
+
+#fgGallery img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: .15s
+}
+
+#bgGallery img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: .15s
+}
+
+
+.gallery img:hover {
+    transform: scale(1.05);
+    border-color: #007bff
+}
+
+.gallery img.selected {
+    border-color: #00d1ff
+}
+
+.gallery img.selected:hover {
+    border-color: #0ac
+}
