@@ -48,6 +48,7 @@ Download button exports two files:
 ## Skills
 When handling email requests, read and follow `~/.claude/skills/latest-emails.md`
 When asked to update the gallery from email, read and follow `.claude/skills/update-gallery.md`
+When asked to deploy new images (or run "images_deployment"), read and follow `.claude/skills/images_deployment.md`
 
 ## Git Workflow
 After every change, commit and push to GitHub with a clear, descriptive commit message that summarizes what was changed and why.
