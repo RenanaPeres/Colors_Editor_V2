@@ -22,6 +22,7 @@ When asked to update the gallery (or "sync gallery from email"), follow these st
 - Check the JS bundle references if needed
 - If the filenames in code differ, update the code to match
 
-## Step 5 — Commit
+## Step 5 — Commit and push
 - Stage the gallery files: `git add gallery/`
 - Commit with a clear message describing the new images (e.g. `Update gallery images: <attachment names>`)
+- Push the branch to GitHub: `git push -u origin <branch-name>`
