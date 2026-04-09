@@ -46,7 +46,8 @@ Download button exports two files:
 2. A JSON state report as a `.txt` file
 
 ## Skills
-When handling email requests, read and follow ~/.claude/skills/latest-emails.md
+When handling email requests, read and follow `~/.claude/skills/latest-emails.md`
+When asked to update the gallery from email, read and follow `.claude/skills/update-gallery.md`
 
 ## Git Workflow
 After every change, commit and push to GitHub with a clear, descriptive commit message that summarizes what was changed and why.
