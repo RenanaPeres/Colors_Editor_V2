@@ -32,6 +32,13 @@ When asked to deploy new images (or run "images_deployment"), follow these steps
 
 ---
 
+## Step 3.5 — Increment version in title
+- Read the current `<title>` element in `index.html`
+- Extract the version number (e.g. `colors v4` → `4`)
+- Increment it by 1
+- Update the `<title>` element with the new version (e.g. `colors v5`)
+- Tell the user: "🔢 Version bumped to colors vX"
+
 ## Step 4 — Verify sync with HTML and JS
 - Tell the user: "🔍 Verifying HTML and JS are in sync..."
 - Check `index.html` for references to `fgGallery.jpg.png` and `bgGallery.jpg.png`
