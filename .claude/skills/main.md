@@ -21,6 +21,7 @@ When asked to deploy new images (or run "images_deployment"), follow these steps
 - Ask the user for a branch name, or suggest one based on the email subject/date (e.g. `images/2026-04-09`)
 - Create the branch from `main`: `git checkout main && git pull && git checkout -b <branch-name>`
 - If the branch already exists, stop and tell the user: "❌ Branch `<branch-name>` already exists. Please choose a different name."
+- Verify that `.claude/skills/` is present on the new branch (it should be, since the branch is created from `main`). If it is missing for any reason, copy it from `main`: `git checkout main -- .claude/skills/`
 
 ---
 
