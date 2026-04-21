@@ -35,11 +35,11 @@ When asked to deploy new images (or run "images_deployment"), follow these steps
 
 ---
 
-## Step 3.5 — Increment version in title
-- Read the current `<title>` element in `index.html`
-- Extract the version number (e.g. `colors v4` → `4`)
-- Increment it by 1
-- Update the `<title>` element with the new version (e.g. `colors v5`)
+## Step 3.5 — Increment version
+- Read the `VERSION` file in the project root — this is the single source of truth for the highest version number
+- Increment the number by 1
+- Update the `VERSION` file with the new number
+- Update the `<title>` element in `index.html` to match (e.g. `colors v5`)
 - Tell the user: "🔢 Version bumped to colors vX"
 
 ## Step 4 — Verify sync with HTML and JS
@@ -53,10 +53,12 @@ When asked to deploy new images (or run "images_deployment"), follow these steps
 
 ## Step 5 — Commit
 - Tell the user: "💾 Committing changes..."
-- Stage the gallery files: `git add gallery/`
-- Commit with a clean, descriptive message, e.g.: `Update gallery images: fgGallery and bgGallery replaced`
+- Stage all changed files: `git add gallery/ index.html VERSION`
+- Commit with a clean, descriptive message, e.g.: `Update gallery images: fgGallery and bgGallery replaced, bump to colors vX`
 - Push the branch to GitHub: `git push -u origin <branch-name>`
 - If the push fails, stop and tell the user the error and suggest: "Check your GitHub credentials or remote URL with `git remote -v`."
+- Sync the updated VERSION back to `main` so future branches start from the correct number:
+  `git checkout main && git checkout <branch-name> -- VERSION && git commit -m "Bump VERSION to X" && git push origin main && git checkout <branch-name>`
 
 ---
 
