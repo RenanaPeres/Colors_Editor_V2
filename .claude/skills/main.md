@@ -2,6 +2,8 @@
 
 When asked to deploy new images (or run "images_deployment"), follow these steps exactly. Send a progress message to the user before each step.
 
+> **Session prerequisite:** Gmail and AWS require re-authentication at the start of every new session. Before doing anything else, verify both are accessible — if not, prompt the user to authenticate (`gcloud auth` / `aws configure` or equivalent) before continuing.
+
 ---
 
 ## Step 1 — Fetch images from email
