@@ -60,14 +60,15 @@ When asked to deploy new images (or run "images_deployment"), follow these steps
 
 ---
 
-## Step 6 — Create Amplify branch
-- Tell the user: "☁️ Creating Amplify branch..."
-- Use the AWS CLI to create a branch in the **Colors_Editor_V2** Amplify app:
-  - App ID: `drl128l7bfm5z`
-  - Region: `us-east-2`
+## Step 6 — Create Amplify branch and trigger deployment
+- Tell the user: "☁️ Creating Amplify branch and connecting to GitHub..."
+- Create the branch in Amplify:
   - Command: `aws amplify create-branch --app-id drl128l7bfm5z --branch-name <branch-name> --region us-east-2`
-- If the branch already exists in Amplify, skip creation and proceed
-- If creation fails for another reason, stop and tell the user the error with the raw AWS message
+  - If the branch already exists in Amplify, skip creation and proceed
+  - If creation fails for another reason, stop and tell the user the error with the raw AWS message
+- Trigger the build/deploy by starting a release job:
+  - Command: `aws amplify start-job --app-id drl128l7bfm5z --branch-name <branch-name> --job-type RELEASE --region us-east-2`
+  - This connects the GitHub branch to Amplify and kicks off the deployment
 
 ---
 
