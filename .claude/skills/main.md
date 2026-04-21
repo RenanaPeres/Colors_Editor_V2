@@ -36,9 +36,10 @@ When asked to deploy new images (or run "images_deployment"), follow these steps
 ---
 
 ## Step 3.5 — Increment version
-- Read the `VERSION` file in the project root — this is the single source of truth for the highest version number
+- Always read VERSION from `main` — it is the single global source of truth, regardless of which branch you are on:
+  `git show main:VERSION`
 - Increment the number by 1
-- Update the `VERSION` file with the new number
+- Write the new number to the `VERSION` file on the current branch
 - Update the `<title>` element in `index.html` to match (e.g. `colors v5`)
 - Tell the user: "🔢 Version bumped to colors vX"
 
