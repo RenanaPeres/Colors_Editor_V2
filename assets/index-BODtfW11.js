@@ -249,7 +249,7 @@ const K = [{
 }]
     , X = [{
     id: "bgGallery",
-    src: "/gallery/bgGallery.jpg.jpeg"
+    src: "/gallery/bgGallery.jpg.png"
 }];
 function D(e, s, d, r) {
     const a = document.getElementById(e);
