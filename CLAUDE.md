@@ -46,9 +46,7 @@ Download button exports two files:
 2. A JSON state report as a `.txt` file
 
 ## Skills
-When handling email requests, read and follow `~/.claude/skills/latest-emails.md`
-When asked to update the gallery from email, read and follow `.claude/skills/update-gallery.md`
-When asked to deploy new images (or run "images_deployment"), read and follow `.claude/skills/main.md`
+When asked to deploy new images (or run "images_deployment" or `/main`), read and follow `.claude/skills/main.md`
 
 ## Version Tracking
 The current app version is tracked via the `<title>` element in `index.html`. Current version: **colors v4**.
